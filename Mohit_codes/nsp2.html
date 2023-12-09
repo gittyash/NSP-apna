@@ -1,0 +1,63 @@
+<body class="back-img" body background="bg.jpg"></body>
+<form class="credit-card">
+    <div class="form-header">
+      <h4 class="title">Credit card detail</h4>
+      <link rel="stylesheet" href="style.css">
+   
+      <div class="input-group">
+        <div class="input-box">
+      <input type="text" required class="name" placeholder="Card Number">
+      <i class="fa fa-user icon"></i>
+   </div>
+   </div>
+      <!-- Date Field -->
+      <div class="date-field">
+        <div class="month">
+          <select name="Month">
+            <option value="january">January</option>
+            <option value="february">February</option>
+            <option value="march">March</option>
+            <option value="april">April</option>
+            <option value="may">May</option>
+            <option value="june">June</option>
+            <option value="july">July</option>
+            <option value="august">August</option>
+            <option value="september">September</option>
+            <option value="october">October</option>
+            <option value="november">November</option>
+            <option value="december">December</option>
+          </select>
+        </div>
+        <div class="year">
+          <select name="Year">
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+          </select>
+        </div>
+      </div>
+   
+      <div class="input-group1">
+        <div class="input-box">
+          <input type="text" placeholder="CVV" required class="name">
+          <i class="fa fa-user icon"></i>
+        </div>
+        <div class="cvv-details">
+          <p>3 or 4 digits usually found <br> on the signature strip</p>
+        </div>
+      </div>
+   
+      <button type="submit" class="proceed-btn" onclick="openPopup()"><a href="nsp3.html">Proceed</a></button>
+      <button type="submit" class="paypal-btn">
+        <a href="#" center>Pay With</a>
+        <img src="data:image/png;base64,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" style="width : 50px; height : 30px;"></img>
+      </button>
+    </div>
+  </div>
+</form>
