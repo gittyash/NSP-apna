@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Car Reselling Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+
+
+    <header>
+        <div class="logo">
+            <img  src="images/logo.png" width="50">
+            <div class="company-name">FASTLANE</div>
+        </div>
+        <button class="menu-button" onclick="toggleMenu()">MENU</button>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <a href="#" class="til">Home</a>
+            <a href="#" class="til">Browse Collection</a>
+            <a href="#" class="til">About Us</a>
+            <!-- Add more navigation links as needed -->
+        </nav>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            var nav = document.querySelector('nav');
+            var menuButton = document.querySelector('.menu-button');
+            nav.classList.toggle('active');
+            menuButton.classList.toggle('active');
+        }
+    </script>
+    
+
+
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Find Your Dream Car</h2>
+            <p>Explore our collection of high-quality used cars</p>
+            <section class="search-bar">
+                <input type="text" class="search-input" placeholder="Search for cars...">
+                <a href="#" class="search-btn">Search</a>
+            </section>
+            <!-- <a href="#" class="btn">View Cars</a> -->
+        </div>
+    </section>
+
+
+
+    <section class="sell-your-car">
+        <h2>Sell Your Car With Us</h2>
+        <div class="sell-your-car-content">
+            <div>
+                <h4>Why sell with us?</h4>
+                <ul>
+                    <li class="sell-your-car-points">Competitive prices</li>
+                    <li class="sell-your-car-points">Simple process</li>
+                    <li class="sell-your-car-points">Wide exposure</li>
+                    <li class="sell-your-car-points">Trust & reliability</li>
+                </ul>
+                <div class="sell-your-car-form">
+                    <form>
+                        
+                        <button class="form-button">Know more...</button>
+                    </form>
+                </div>
+            </div>
+            <div class="sell-your-car-image">
+                <img src="images/sellbg.jpg" alt="Sell Your Car Image">
+            </div>
+        </div>
+        <div class="sell-img" style="background-image: url('images/Audi8l.jpg');"></div>
+    </section>
+
+
+    <h2 class="tile">Featured Cars</h2>
+    <section class="featured-cars">
+        <div class="car-card">
+            <div class="car-image" style="background-image: url('images/AudiR8.jpg');"></div>
+            <h3>Audi R8</h3>
+            <p class="white-txt">V10 Powerhouse</p>
+            <p class="white-txt">Quattro All-Wheel Drive</p>
+            <p class="white-txt">Lightweight Aluminum Construction</p>
+            <a href="car-details-audi.html" class="btn">View Details</a>
+        </div>
+        <div class="car-card">
+            <div class="car-image" style="background-image: url('images/Audi8l.jpg');"></div>
+            <h3>Audi A8L 2022</h3>
+            <p class="white-txt">Effortless Performance</p>
+            <p class="white-txt">Luxurious Interiors</p>
+            <p class="white-txt">Cutting-Edge Technology</p>
+            <a href="car-details-mercedes.html" class="btn">View Details</a>
+        </div>
+        <!-- Add more car-card sections as needed -->
+    </section>
+
+
+
+    <section class="subscription">
+        <h2>Subscribe for Updates</h2>
+        <div class="social-icons">
+            <p class="tile ">FOLLOW US </p>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="https://youtube.com/@TheBharatOfToday?si=oil9G51WLRB2d6TS" class="fa fa-youtube"></a>
+        </div>
+        <div class="subscription-form">
+            <input type="email" class="email-input" placeholder="Enter your email address">
+            <a href="#" class="subscribe-btn">Subscribe</a>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <p>&copy; 2023 FASTLANE</p>
+    </footer>
+
+</body>
+
+</html>
