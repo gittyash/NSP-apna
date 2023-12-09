@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolls Royce Ghost Series II search results</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #ccc;
+            padding: 20px;
+            display: flex;
+            align-items: flex-start;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        header h1 {
+            color: black;
+            margin: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            margin-left: 200px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        li h2 {
+            color: black;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        li p {
+            color: #333;
+            font-size: 12px;
+            margin: 0;
+        }
+
+        /* Second List */
+        ul + ul {
+            margin-left: 300px;
+        }
+
+        /* Slideshow */
+        .slideshow-container {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            height: 70%;
+        }
+
+        .slide {
+            min-width: 50%; /* Set to 50% for two images side by side */
+            min-height: 70%;
+            display: flex; /* Add flex to align images side by side */
+            transition: transform 1s ease; /* Adjusted transition duration */
+        }
+
+        .slide img {
+            width: 100%; /* Set to 100% for each image to take half of the container */
+            height: auto;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: #333;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.5); /* Black transparent background */
+            padding: 10px; /* Adjust padding as needed */
+            border-radius: 50%; /* Make it circular */
+        }
+
+        .arrow.left {
+            left: 10px;
+        }
+
+        .arrow.right {
+            right: 10px;
+        }
+
+        #video-container {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            position: relative;
+            opacity: 0.9;
+        }
+
+        #video {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            filter: brightness(70%);
+        }
+
+        /* Own This Car Link */
+        #own-car-link {
+            background-color: #ccc;
+            text-align: center;
+            padding: 30px;
+            color: black;
+            font-family: 'Courier New', monospace;
+            text-decoration: none;
+            display: block;
+            margin-top:0px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with List -->
+    <header>
+        <h1>GHOST SERIES II</h1>
+        <ul>
+            <li>
+                <h2>REG. YEAR:</h2>
+                <p>2015</p>
+            </li>
+            <li>
+                <h2>KMS DRIVEN:</h2>
+                <p>42000</p>
+            </li>
+            <li>
+                <h2>FUEL TYPE:</h2>
+                <p>Petrol</p>
+            </li>
+            <!-- Add more list items as needed -->
+        </ul>
+
+        <!-- Second List -->
+        <ul>
+            <li>
+                <h2>REG. STATE:</h2>
+                <p>Kerala</p>
+            </li>
+            <li>
+                <h2>VEHICLE TYPE:</h2>
+                <p>Sedan</p>
+            </li>
+            <li>
+                <h2>ENGINE:</h2>
+                <p>6592cc, Twin-Turbocharged, V12</p>
+            </li>
+            <!-- Add more list items as needed -->
+        </ul>
+    </header>
+
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+        <div class="slide">
+            <img src="C:\Users\Yash\OneDrive\Desktop\nsp\rolls royce\series2_slides\ghost_1.jpeg">
+            <img src="C:\Users\Yash\OneDrive\Desktop\nsp\rolls royce\series2_slides\ghost_2.jpeg">
+        </div>
+        <div class="slide">
+            <img src="C:\Users\Yash\OneDrive\Desktop\nsp\rolls royce\series2_slides\ghost_3.jpeg">
+            <img src="C:\Users\Yash\OneDrive\Desktop\nsp\rolls royce\series2_slides\ghost_4.jpeg">
+        </div>
+        <div class="slide">
+            <img src="C:\Users\Yash\OneDrive\Desktop\nsp\rolls royce\series2_slides\ghost_5.jpeg">
+            <!-- Duplicate the first image to create an endless loop -->
+            <img src="C:\Users\Yash\OneDrive\Desktop\nsp\rolls royce\series2_slides\ghost_1.jpeg">
+        </div>
+        <div class="arrow left" onclick="prevSlide()">&#10094;</div>
+        <div class="arrow right" onclick="nextSlide()">&#10095;</div>
+    </div>
+
+    <!-- Video -->
+    <div id="video-container">
+        <video id="video" width="100%" height="650" autoplay muted loop style="object-fit: cover;filter: brightness(30%);">
+            <source src="ghost_cut.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Own This Car Link -->
+    <a id="own-car-link" href="#"><b>Own This Car</b></a>
+
+    <script>
+        // Intersection Observer to play video when it comes into view
+        const video = document.getElementById('video');
+        const videoContainer = document.getElementById('video-container');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            });
+        }, { threshold: 0.5 }); // Adjust the threshold as needed
+
+        observer.observe(videoContainer);
+        let slideIndex = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.slide');
+            if (index >= slides.length) {
+                slideIndex = 0;
+            } else if (index < 0) {
+                slideIndex = slides.length - 1;
+            } else {
+                slideIndex = index;
+            }
+
+            const translation = -slideIndex * 100 + '%';
+            slides.forEach(slide => {
+                slide.style.transform = 'translateX(' + translation + ')';
+            });
+        }
+
+        function nextSlide() {
+            showSlide(slideIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(slideIndex - 1);
+        }
+
+        // Automatic slideshow
+        setInterval(nextSlide, 5000);
+    </script>
+
+</body>
+</html>

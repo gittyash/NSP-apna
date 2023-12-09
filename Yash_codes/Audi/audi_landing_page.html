@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head><title>AUDI search results</title>
+    <style>
+        body {
+            background-image: url('bg.jpg'); /* Change to the path of your background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            filter: brightness(30%);
+        }
+
+        .section-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .section {
+	    opacity:1.0;
+            width: calc(30% - 40px);
+            height: 300px;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            background-color: #ccc;
+            font-family: 'Courier New', monospace;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* White glow effect */
+        }
+
+        .section img {
+            max-width: 100%;
+            max-height: 60%;
+            border: 2px solid #000;
+        }
+
+        footer {
+	    opacity:1.0;
+            background-color: #ddd; /* Grey background color for the footer */
+            padding: 30px;
+            text-align: center;
+            font-family: 'Courier New', monospace;
+            color: black; /* Font color */
+            margin-top: 60px; /* Adjust margin as needed */
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop poster="bg.jpg">
+        <source src="C:\Users\Yash\OneDrive\Desktop\nsp\bg_drfit_vid_cut.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="section-container">
+        <div class="section">
+            <img src="C:\Users\Yash\OneDrive\Desktop\nsp\audi\r8_icon.jpg" alt="AUDI R8 V10">
+            <h2><b><u>2016 AUDI R8 V10 PLUS</u></b></h2>
+	    <h3><b><p> Rs.2 80 00 000</p></b></h3>
+            <h4><p><a href="C:\Users\Yash\OneDrive\Desktop\nsp\audi\audi_r8.html">View more info</a></p></h4>
+        </div>
+
+        <div class="section">
+            <img src="C:\Users\Yash\OneDrive\Desktop\nsp\audi\audi_a8l.jpeg" alt="AUDI A8L">
+            <h2><b><u>2019 AUDI A8L QUATTRO</u></b></h2>
+	    <h3><b><p> Rs.95 00 000</p></b></h3>
+            <h4><p><a href="C:\Users\Yash\OneDrive\Desktop\nsp\audi\audi_a8l.html">View more info</a></p></h4>
+        </div>
+
+        <div class="section">
+            <img src="C:\Users\Yash\OneDrive\Desktop\nsp\audi\audi_s5.jpg" alt="AUDI S5">
+            <h2><b><u>AUDI S5 SPORTSBACK</u></b></h2>
+	    <h3><b><p> Rs.75 00 000</p></b></h3>
+            <h4><p><a href="C:\Users\Yash\OneDrive\Desktop\nsp\audi\audi_s5.html">View more info</a></p></h4>
+        </div>
+
+        <!-- Add more sections as needed -->
+    </div>
+    <!-- Footer -->
+    <footer>
+        <p><a href="url" style="text-decoration: none; color: black;"><b><h2>Want to list your car?</h2></b></a></p>
+    </footer>
+</body>
+</html>
